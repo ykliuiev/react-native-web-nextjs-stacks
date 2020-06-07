@@ -1,23 +1,28 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native';
+import { Box } from '@mobily/stacks';
+
+// dynamic import works correctly
+// import dynamic from 'next/dynamic';
+// const Box = dynamic(
+//   () => import('@mobily/stacks').then((mod) => mod.Box),
+//   {
+//     ssr: false,
+//   },
+// );
 
 export default function App(props) {
   return (
-    <View style={styles.container}>
+    <Box flex="fluid" alignX="center" alignY={['center', 'top']}>
       <Text accessibilityRole="header" style={styles.text}>
         React Native for Web & Next.js
       </Text>
-
-      <Text style={styles.link} accessibilityRole="link" href={`/alternate`}>
-        A universal link
-      </Text>
-
       <View style={styles.textContainer}>
         <Text accessibilityRole="header" aria-level="2" style={styles.text}>
-          Subheader
+          Should be at the top on initial render
         </Text>
       </View>
-    </View>
-  )
+    </Box>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -38,4 +43,4 @@ const styles = StyleSheet.create({
     fontSize: 24,
     marginBottom: 24,
   },
-})
+});

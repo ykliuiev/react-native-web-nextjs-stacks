@@ -6,12 +6,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mobily/stacks": "^0.9.2",
     "next": "latest",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-native": "^0.62.2",
     "react-native-web": "^0.11.6"
   },
   "devDependencies": {
-    "babel-plugin-react-native-web": "^0.11.7"
+    "babel-plugin-react-native-web": "^0.11.7",
+    "next-transpile-modules": "^3.3.0"
   }
 }
